@@ -98,7 +98,7 @@ function showGeoJSON(option) {
                 };
             },
             onEachFeature: function (feature, layer) {
-                layer.bindPopup('Name: ' + feature.properties.name);
+                layer.bindPopup(+ feature.properties.name);
                 bounds.extend(layer.getBounds()); // Extend bounds to include this feature
             }
         }).addTo(map);
